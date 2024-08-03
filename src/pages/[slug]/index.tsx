@@ -11,12 +11,13 @@ export default function Slug() {
     try {
       await navigator.clipboard.writeText(e);
       setAlertCount((prevCount) => prevCount++);
-      alert("Password copied to clipboard!");
+      alert("Password copied! Please klik OK");
       if (alertCount > 0) {
         window.open(`https://${router.asPath}.com`, "_blank", "noopener noreferrer");
       }
     } catch (error) {
       console.log("Failed to copy: ", error);
+      window.open("/");
       return error;
     }
   };
