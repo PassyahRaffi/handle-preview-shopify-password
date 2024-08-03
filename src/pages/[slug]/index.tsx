@@ -10,7 +10,7 @@ export default function Slug() {
   const handleCopy = async (e: string) => {
     try {
       await navigator.clipboard.writeText(e);
-      setAlertCount((prevCount) => prevCount++);
+      setAlertCount((prevCount) => prevCount + 1);
       alert("Password copied! Please klik OK");
       if (alertCount > 0) {
         window.open(`https://${router.asPath}.com`, "_blank", "noopener noreferrer");
