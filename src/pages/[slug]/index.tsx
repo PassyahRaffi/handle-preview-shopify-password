@@ -6,6 +6,7 @@ export default function Slug() {
   const router = useRouter();
   const textCopy = "shopex";
   const [alertCount, setAlertCount] = useState(1);
+  const query = router.query.query ? router.query.query : 'Loading...';
 
   const handleCopy = async (e: string) => {
     try {
@@ -39,7 +40,7 @@ export default function Slug() {
             className="relative py-2 border border-black rounded-lg cursor-pointer"
           >
             <h2 className="text-lg">
-              <b>&nbsp;{textCopy}</b>
+              <b>&nbsp;{query}</b>
             </h2>
             <div
               className="absolute top-[5px] right-[5px] hover:opacity-25 cursor-pointer"
