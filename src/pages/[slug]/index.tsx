@@ -5,9 +5,7 @@ import { useRouter } from 'next/router';
 export default function Slug() {
   const router = useRouter()
   const textCopy = "shopex";
-  const urlToOpen = "https://ninisumohandoyo.com/";
   const [alertCount, setAlertCount] = useState(1);
-  console.log(router.asPath);
 
   const handleCopy = async (e: string) => {
     try {
