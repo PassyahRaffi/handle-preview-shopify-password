@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function Slug() {
   const router = useRouter();
-  const textCopy = "shopex";
   const [alertCount, setAlertCount] = useState(1);
   const query = router.query.query ? router.query.query : 'Loading...';
 
@@ -36,7 +35,7 @@ export default function Slug() {
             password
           </h2>
           <div
-            onClick={() => handleCopy(textCopy)}
+            onClick={() => handleCopy(String(query))}
             className="relative py-2 border border-black rounded-lg cursor-pointer"
           >
             <h2 className="text-lg">
